@@ -1,0 +1,3 @@
+variant,precision,coverage,shared,pop_pct
+full (biases + factors),0.015,0.0231,5.72,0.831
+factors only (no biases),0.041,0.0615,1.07,0.925

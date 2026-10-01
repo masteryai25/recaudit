@@ -1,0 +1,62 @@
+[
+  {
+    "strategy": "none",
+    "alpha": 0.0,
+    "precision@10": 0.0151,
+    "ndcg@10": 0.0164,
+    "mean_popularity_of_recs": 0.8309,
+    "genres_per_list": 10.171,
+    "catalogue_coverage": 0.0231,
+    "gini_of_recommendations": 0.9971
+  },
+  {
+    "strategy": "popularity_penalty",
+    "alpha": 0.25,
+    "precision@10": 0.0088,
+    "ndcg@10": 0.0097,
+    "mean_popularity_of_recs": 0.7896,
+    "genres_per_list": 10.264,
+    "catalogue_coverage": 0.0203,
+    "gini_of_recommendations": 0.9973
+  },
+  {
+    "strategy": "popularity_penalty",
+    "alpha": 0.5,
+    "precision@10": 0.0064,
+    "ndcg@10": 0.007,
+    "mean_popularity_of_recs": 0.6951,
+    "genres_per_list": 10.426,
+    "catalogue_coverage": 0.0177,
+    "gini_of_recommendations": 0.9974
+  },
+  {
+    "strategy": "popularity_penalty",
+    "alpha": 1.0,
+    "precision@10": 0.002,
+    "ndcg@10": 0.0022,
+    "mean_popularity_of_recs": 0.2719,
+    "genres_per_list": 11.022,
+    "catalogue_coverage": 0.0204,
+    "gini_of_recommendations": 0.9962
+  },
+  {
+    "strategy": "mmr",
+    "alpha": 0.2,
+    "precision@10": 0.0142,
+    "ndcg@10": 0.0157,
+    "mean_popularity_of_recs": 0.8314,
+    "genres_per_list": 12.514,
+    "catalogue_coverage": 0.0225,
+    "gini_of_recommendations": 0.9969
+  },
+  {
+    "strategy": "mmr",
+    "alpha": 0.4,
+    "precision@10": 0.0146,
+    "ndcg@10": 0.0157,
+    "mean_popularity_of_recs": 0.8214,
+    "genres_per_list": 14.614,
+    "catalogue_coverage": 0.0231,
+    "gini_of_recommendations": 0.9969
+  }
+]

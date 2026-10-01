@@ -1,0 +1,90 @@
+[
+  {
+    "round": 1,
+    "condition": "random_recs",
+    "round_gini": 0.8233,
+    "round_effective_catalogue": 1255,
+    "round_distinct_items": 1621,
+    "gini": 0.8233,
+    "effective_catalogue_80pct": 1255,
+    "distinct_items_consumed": 1621,
+    "mean_rating_given": 3.508
+  },
+  {
+    "round": 2,
+    "condition": "random_recs",
+    "round_gini": 0.8181,
+    "round_effective_catalogue": 1281,
+    "round_distinct_items": 1647,
+    "gini": 0.6995,
+    "effective_catalogue_80pct": 2211,
+    "distinct_items_consumed": 2943,
+    "mean_rating_given": 3.539
+  },
+  {
+    "round": 3,
+    "condition": "random_recs",
+    "round_gini": 0.8202,
+    "round_effective_catalogue": 1271,
+    "round_distinct_items": 1637,
+    "gini": 0.6148,
+    "effective_catalogue_80pct": 2888,
+    "distinct_items_consumed": 3986,
+    "mean_rating_given": 3.542
+  },
+  {
+    "round": 4,
+    "condition": "random_recs",
+    "round_gini": 0.8196,
+    "round_effective_catalogue": 1274,
+    "round_distinct_items": 1640,
+    "gini": 0.5549,
+    "effective_catalogue_80pct": 3343,
+    "distinct_items_consumed": 4807,
+    "mean_rating_given": 3.536
+  },
+  {
+    "round": 5,
+    "condition": "random_recs",
+    "round_gini": 0.8209,
+    "round_effective_catalogue": 1267,
+    "round_distinct_items": 1633,
+    "gini": 0.5113,
+    "effective_catalogue_80pct": 3618,
+    "distinct_items_consumed": 5448,
+    "mean_rating_given": 3.552
+  },
+  {
+    "round": 6,
+    "condition": "random_recs",
+    "round_gini": 0.8229,
+    "round_effective_catalogue": 1257,
+    "round_distinct_items": 1623,
+    "gini": 0.4724,
+    "effective_catalogue_80pct": 3808,
+    "distinct_items_consumed": 6004,
+    "mean_rating_given": 3.552
+  },
+  {
+    "round": 7,
+    "condition": "random_recs",
+    "round_gini": 0.8163,
+    "round_effective_catalogue": 1290,
+    "round_distinct_items": 1656,
+    "gini": 0.4424,
+    "effective_catalogue_80pct": 3879,
+    "distinct_items_consumed": 6441,
+    "mean_rating_given": 3.53
+  },
+  {
+    "round": 8,
+    "condition": "random_recs",
+    "round_gini": 0.8203,
+    "round_effective_catalogue": 1270,
+    "round_distinct_items": 1636,
+    "gini": 0.4209,
+    "effective_catalogue_80pct": 4056,
+    "distinct_items_consumed": 6757,
+    "mean_rating_given": 3.564
+  }
+]

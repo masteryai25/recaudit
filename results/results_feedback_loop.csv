@@ -1,0 +1,9 @@
+round,condition,round_gini,round_effective_catalogue,round_distinct_items,gini,effective_catalogue_80pct,distinct_items_consumed,mean_rating_given
+1,random_recs,0.8233,1255,1621,0.8233,1255,1621,3.508
+2,random_recs,0.8181,1281,1647,0.6995,2211,2943,3.539
+3,random_recs,0.8202,1271,1637,0.6148,2888,3986,3.542
+4,random_recs,0.8196,1274,1640,0.5549,3343,4807,3.536
+5,random_recs,0.8209,1267,1633,0.5113,3618,5448,3.552
+6,random_recs,0.8229,1257,1623,0.4724,3808,6004,3.552
+7,random_recs,0.8163,1290,1656,0.4424,3879,6441,3.53
+8,random_recs,0.8203,1270,1636,0.4209,4056,6757,3.564

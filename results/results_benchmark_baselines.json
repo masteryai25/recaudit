@@ -1,0 +1,29 @@
+[
+  {
+    "model": "Popularity (reference)",
+    "precision@10": 0.0492,
+    "ndcg@10": 0.0653,
+    "catalogue_coverage": 0.0101,
+    "mean_shared_of_10": 5.59,
+    "top10_items_share_of_slots": 0.6787,
+    "n_users_evaluated": 587
+  },
+  {
+    "model": "ALS (implicit library)",
+    "precision@10": 0.0625,
+    "ndcg@10": 0.0814,
+    "catalogue_coverage": 0.108,
+    "mean_shared_of_10": 0.586,
+    "top10_items_share_of_slots": 0.1337,
+    "n_users_evaluated": 587
+  },
+  {
+    "model": "BPR (implicit library)",
+    "precision@10": 0.0411,
+    "ndcg@10": 0.0564,
+    "catalogue_coverage": 0.3093,
+    "mean_shared_of_10": 0.12,
+    "top10_items_share_of_slots": 0.0513,
+    "n_users_evaluated": 587
+  }
+]

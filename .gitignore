@@ -1,0 +1,7 @@
+*.zip
+*.parquet
+ratings*.csv
+movies.csv
+__pycache__/
+*.pyc
+.DS_Store

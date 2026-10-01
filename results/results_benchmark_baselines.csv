@@ -1,0 +1,4 @@
+model,precision@10,ndcg@10,catalogue_coverage,mean_shared_of_10,top10_items_share_of_slots,n_users_evaluated
+Popularity (reference),0.0492,0.0653,0.0101,5.59,0.6787,587
+ALS (implicit library),0.0625,0.0814,0.108,0.586,0.1337,587
+BPR (implicit library),0.0411,0.0564,0.3093,0.12,0.0513,587

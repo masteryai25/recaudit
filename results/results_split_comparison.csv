@@ -1,0 +1,7 @@
+split,model,rmse,mae,fit_seconds
+random,Baseline,0.905,0.6896,0.0
+random,UserCF,0.8808,0.6674,0.6
+random,MatrixFactorisation,0.8564,0.655,22.1
+temporal,Baseline,0.948,0.7221,0.0
+temporal,UserCF,0.9258,0.7039,0.5
+temporal,MatrixFactorisation,0.8876,0.6804,22.4

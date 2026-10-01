@@ -1,0 +1,4 @@
+model,random,temporal,difference,percent_worse
+Baseline,0.905,0.948,0.043,4.8
+MatrixFactorisation,0.8564,0.8876,0.0312,3.6
+UserCF,0.8808,0.9258,0.045,5.1

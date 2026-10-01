@@ -1,0 +1,6 @@
+method,mean_jaccard,mean_shared_items_of_10,pairs_sharing_half_or_more,distinct_items_recommended,most_recommended_item_reach,top10_items_share_of_all_slots
+"random (reference: no personalisation, no popularity)",0.0007,0.013,0.0,4299,0.0098,0.0084
+popularity only (reference: identical lists),0.3432,4.657,0.528,98,0.6721,0.6015
+Baseline,0.0188,0.342,0.0018,734,0.0984,0.0695
+UserCF,0.0323,0.549,0.0178,1123,0.2377,0.1798
+MatrixFactorisation,0.4343,5.715,0.7253,190,0.9393,0.719

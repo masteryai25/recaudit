@@ -1,0 +1,47 @@
+[
+  {
+    "method": "random (reference: no personalisation, no popularity)",
+    "mean_jaccard": 0.0007,
+    "mean_shared_items_of_10": 0.013,
+    "pairs_sharing_half_or_more": 0.0,
+    "distinct_items_recommended": 4299,
+    "most_recommended_item_reach": 0.0098,
+    "top10_items_share_of_all_slots": 0.0084
+  },
+  {
+    "method": "popularity only (reference: identical lists)",
+    "mean_jaccard": 0.3432,
+    "mean_shared_items_of_10": 4.657,
+    "pairs_sharing_half_or_more": 0.528,
+    "distinct_items_recommended": 98,
+    "most_recommended_item_reach": 0.6721,
+    "top10_items_share_of_all_slots": 0.6015
+  },
+  {
+    "method": "Baseline",
+    "mean_jaccard": 0.0188,
+    "mean_shared_items_of_10": 0.342,
+    "pairs_sharing_half_or_more": 0.0018,
+    "distinct_items_recommended": 734,
+    "most_recommended_item_reach": 0.0984,
+    "top10_items_share_of_all_slots": 0.0695
+  },
+  {
+    "method": "UserCF",
+    "mean_jaccard": 0.0323,
+    "mean_shared_items_of_10": 0.549,
+    "pairs_sharing_half_or_more": 0.0178,
+    "distinct_items_recommended": 1123,
+    "most_recommended_item_reach": 0.2377,
+    "top10_items_share_of_all_slots": 0.1798
+  },
+  {
+    "method": "MatrixFactorisation",
+    "mean_jaccard": 0.4343,
+    "mean_shared_items_of_10": 5.715,
+    "pairs_sharing_half_or_more": 0.7253,
+    "distinct_items_recommended": 190,
+    "most_recommended_item_reach": 0.9393,
+    "top10_items_share_of_all_slots": 0.719
+  }
+]

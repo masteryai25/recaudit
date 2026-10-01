@@ -1,0 +1,7 @@
+strategy,alpha,precision@10,ndcg@10,mean_popularity_of_recs,genres_per_list,catalogue_coverage,gini_of_recommendations
+none,0.0,0.0151,0.0164,0.8309,10.171,0.0231,0.9971
+popularity_penalty,0.25,0.0088,0.0097,0.7896,10.264,0.0203,0.9973
+popularity_penalty,0.5,0.0064,0.007,0.6951,10.426,0.0177,0.9974
+popularity_penalty,1.0,0.002,0.0022,0.2719,11.022,0.0204,0.9962
+mmr,0.2,0.0142,0.0157,0.8314,12.514,0.0225,0.9969
+mmr,0.4,0.0146,0.0157,0.8214,14.614,0.0231,0.9969
