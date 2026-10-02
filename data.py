@@ -1,4 +1,4 @@
-"""Load MovieLens 100K and split it per user, most recent ratings held out.
+"""Load MovieLens ml-latest-small and split it per user, most recent ratings held out.
 
 A per-user temporal split is used rather than a random split: recommending is a
 prediction about the future, so the test set should be the future.
@@ -13,17 +13,18 @@ import numpy as np
 
 RANDOM_SEED = 42
 
-ML_100K_URL = "https://files.grouplens.org/datasets/movielens/ml-latest-small.zip"
+ML_LATEST_SMALL_URL = "https://files.grouplens.org/datasets/movielens/ml-latest-small.zip"
 ML_1M_URL = "https://files.grouplens.org/datasets/movielens/ml-1m.zip"
 
 
 def download_movielens(force=False):
-    """Fetch MovieLens 100K and write ratings.csv and movies.csv alongside this
-    script. Called automatically if the files are missing."""
+    """Fetch the MovieLens ml-latest-small release (100,836 ratings, 610 users)
+    and write ratings.csv and movies.csv alongside this script.
+    Note: this is not the historical MovieLens 100K dataset (943 users). Called automatically if the files are missing."""
     if not force and os.path.exists("ratings.csv") and os.path.exists("movies.csv"):
         return
-    print(f"downloading MovieLens from {ML_100K_URL} ...")
-    with urllib.request.urlopen(ML_100K_URL) as resp:
+    print(f"downloading MovieLens ml-latest-small from {ML_LATEST_SMALL_URL} ...")
+    with urllib.request.urlopen(ML_LATEST_SMALL_URL) as resp:
         blob = resp.read()
     with zipfile.ZipFile(io.BytesIO(blob)) as z:
         for name in ("ratings.csv", "movies.csv"):

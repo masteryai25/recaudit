@@ -13,15 +13,17 @@ population-level behaviour invisible by construction.
 
 ## The finding that motivated it
 
-On MovieLens, a standard rating-optimised matrix factorisation model produces
+On MovieLens latest-small (610 users, 100,836 ratings — the `ml-latest-small`
+release, not the historical MovieLens 100K dataset), a standard rating-optimised
+matrix factorisation model produces
 recommendations that are **less differentiated between users than ranking by
-popularity while ignoring the user entirely**.
+global popularity without using any user-preference information**.
 
 | | shared items between two random users (out of 10) |
 |---|---|
 | random recommendations | 0.01 |
 | **matrix factorisation (rating-optimised)** | **5.72** |
-| popularity ranking, user ignored | 4.65 |
+| popularity-only ranking (no preference info) | 4.65 |
 | ALS (ranking-optimised) | 0.35 |
 
 Seven films fill half of every recommendation slot in the system. One film
@@ -42,6 +44,15 @@ Those absorb most of the variance in ratings, which is why they are standard
 practice and why they improve rating prediction. But an item bias is the *same
 number for every user*, so it pushes the same films toward the top of everyone's
 list.
+
+**This mechanism is already known.** Kawamae et al. state it directly: item bias
+increases with popularity, and when item bias values are extremely high the item
+is recommended regardless of whether users like it. The popularity-bias
+literature is substantial (see References). What this project adds is not the
+mechanism but its measured consequence: that the result is *less*
+differentiation between users than ranking by popularity alone, quantified
+against that baseline, replicated on two datasets, and invisible to every
+standard accuracy metric.
 
 Removing them:
 
@@ -104,7 +115,7 @@ not.
 
 ```bash
 pip install numpy pandas scipy matplotlib implicit
-python data.py                      # download and split
+python data.py                      # downloads MovieLens automatically, then splits
 python exp1_split_comparison.py     # random vs temporal evaluation
 python exp2_ranking_and_bias.py     # ranking metrics, error breakdown
 python exp3_feedback_loop.py        # feedback simulation with controls
@@ -139,7 +150,8 @@ python make_figure.py
 
 ## Honest limitations
 
-- Two datasets, both MovieLens. The domain is films; the result may not
+- Two datasets, both MovieLens (`ml-latest-small` and `ml-1m`). The domain is
+  films; the result may not
   transfer to other catalogues.
 - The feedback-loop simulation uses simulated users whose behaviour we specified.
   Its assumptions are stated in `exp3_feedback_loop.py` and it is the least
@@ -147,11 +159,32 @@ python make_figure.py
 - Our popularity-aware modification to ALS (`our_als.py`, `beta`) gives a small
   accuracy gain (+0.0026, seed spread 0.0017 over 5 seeds) and **no meaningful
   coverage gain**. Reported as a negative result.
-- The metrics here are not new; the contribution is packaging them with a
-  meaningful reference point, and the evidence that accuracy cannot substitute
-  for them.
+- The metrics here are not new, and neither is the mechanism. Popularity bias in
+  matrix factorisation is well documented, including the role of the item bias
+  term. The contribution is the measurement framing: a popularity-ranking
+  reference point for inter-user overlap, the finding that a standard model
+  falls on the wrong side of it, and a tool that surfaces this automatically.
+- `recaudit` reports existing metrics. Coverage, Gini and intra-list diversity
+  all appear in prior work. The convenience and the reference baseline are the
+  additions, not the measures.
 
 ## References
+
+**Popularity bias and diversity (the related work this sits in)**
+
+- Abdollahpouri, Mansoury, Burke & Mobasher (2020). *The Connection Between
+  Popularity Bias, Calibration, and Fairness in Recommendation.* RecSys.
+- Abdollahpouri et al. (2021). *User-centered Evaluation of Popularity Bias in
+  Recommender Systems.* UMAP. arXiv:2103.06364
+- Abdollahpouri, Burke & Mobasher (2017). *Controlling Popularity Bias in
+  Learning-to-Rank Recommendation.* RecSys.
+- Kawamae et al. *Accurate and Diverse Recommendation based on Users'
+  Tendencies toward Temporal Item Popularity.* — states the item-bias mechanism
+  directly.
+- Jannach et al. (2015). *What recommenders recommend: an analysis of
+  recommendation biases and possible countermeasures.* UMUAI.
+
+**Methods implemented here**
 
 - Hu, Koren & Volinsky (2008). *Collaborative Filtering for Implicit Feedback
   Datasets.* ICDM. — the ALS method reimplemented in `our_als.py`
